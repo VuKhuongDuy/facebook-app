@@ -3,9 +3,7 @@ var app = express();
 
 app.use(express.static(__dirname + "public"));
 app.use("/a", express.static(__dirname + "/public"));
-// app.get("/", (req, res) => {
-//   res.send();
-// });
+app.use("/", express.static(__dirname + "/public/index.html"));
 
 var server = app.listen(3001, function () {
   var host = server.address().address;
